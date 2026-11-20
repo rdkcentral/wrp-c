@@ -59,7 +59,7 @@ if (NOT MAIN_PROJ_BUILD)
 
 ExternalProject_Add(trower-base64
     PREFIX ${PREFIX_DIR}/trower-base64
-    GIT_REPOSITORY https://github.com/Comcast/trower-base64.git
+    GIT_REPOSITORY https://github.com/rdkcentral/trower-base64.git
     GIT_TAG "v1.1.2"
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DBUILD_TESTING=OFF)
 add_library(libtrower-base64 STATIC IMPORTED)
@@ -79,7 +79,7 @@ add_dependencies(libmsgpack msgpack)
 # cimplog external dependency
 ExternalProject_Add(cimplog
     PREFIX ${PREFIX_DIR}/cimplog
-    GIT_REPOSITORY https://github.com/Comcast/cimplog.git
+    GIT_REPOSITORY https://github.com/rdkcentral/cimplog.git
     GIT_TAG "8a5fb3c2f182241d17f5342bea5b7688c28cd1fd"
     CMAKE_ARGS += -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR}
                   -DBUILD_TESTING=OFF
